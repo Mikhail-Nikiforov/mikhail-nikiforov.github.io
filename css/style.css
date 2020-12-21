@@ -294,7 +294,7 @@ body {
 
 @media (max-width: 480px) {
   .header {
-    background-size: 150%;
+    background-size: 110%;
     background-position: top;
     padding: 0 0 25px;
   }
