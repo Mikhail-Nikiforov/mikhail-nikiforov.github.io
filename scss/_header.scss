@@ -1,0 +1,303 @@
+.header {
+    background: #474541 url(../img/header_bg.png) no-repeat center;
+    background-size: cover;
+    padding: 40px 0 40px 0;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    &_top {
+        display: flex;
+        justify-content: space-between;
+        &_logo {
+            @include button_preset;
+            display: flex;
+            align-items: center;
+            margin: 0 220px 0 0;
+            color: #fff;
+            &_pic {
+                fill: currentColor;
+            }
+            &_txt {
+                display: block;
+                font-family: "raleway", 'Arial', sans-serif;
+                font-weight: 400;
+                font-size: 34px;
+                line-height: 1.1;
+                letter-spacing: -0.05em;
+            }
+        }
+        &_logo:hover {
+            color: #998675;
+        }
+        &_logo:active {
+            color: #c9bdb3 
+        }
+        &_nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            &_input {
+                display: none;
+            }
+            &_menu {
+            list-style-type: none;
+            text-transform: capitalize;
+            box-sizing: border-box;
+            margin: 0 35px 0 0;
+            padding: 0;
+                &_item {
+                    display: inline;
+                    font-family: 'montserrat', 'Arial', sans-serif;
+                    margin: 0 30px 0 0;
+                    &_link {
+                        text-decoration: none;
+                        color: #ffffff;
+                        font-size: 13px;
+                        line-height: 1;
+                        font-weight: 300;
+                        letter-spacing: -0.03em;
+                    }
+                    &_link:hover {
+                        color: #c7b299;
+                        cursor: pointer;
+                    }
+                    &_link:active {
+                        color: #ffe5c5;
+                    }
+                }
+            }
+            &_button {
+                @include button_preset;
+                padding: 0;
+                &_icon {
+                    fill: #fff;
+                } 
+                &_icon:hover {
+                    fill: #d3c1ad;
+                }
+                &_icon:active {
+                    fill: #ffe7cc;
+                }      
+            }
+            &_button:last-child  {
+                margin: 0 0 0 29px;
+            }
+        }
+    }
+    &_main {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 285px 0 250px 0;
+        &_controller {
+            @include button_preset;
+            width: 40px;
+            height: 73px;
+            background-color: unset;
+            &_icon {
+                fill: #a3a2a0;
+            }
+            &_icon:hover {
+                fill: #d3c1ad;
+            }
+            &_icon:active {
+                fill: #fdcd97;
+            }
+        }
+        &_content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 590px;
+            position: relative;
+            &_small-title {
+                font-family: 'raleway', 'Arial', sans-serif;
+                font-weight: 500;
+                font-size: 36px;
+                line-height: 1.1;
+                margin: 0 0 14px 0;
+                padding: 0;
+            }
+            &_large-title {
+                font-family: 'raleway', 'Arial', sans-serif;
+                font-weight: 800;
+                font-size: 52px;
+                line-height: 1.1;
+                margin: 0 0 14px 0;
+                padding: 0;
+            }
+            &_txt {
+                font-family: 'montserrat', 'Arial', sans-serif;
+                font-size: 16px;
+                line-height: 29px;
+                font-weight: 300;
+                margin: 0 0 50px 0;
+                text-align: center;
+                max-width: 568px;
+            }
+            &_button {
+                @include button_preset;
+                text-transform: uppercase;
+                background-color: #998675;
+                border-radius: 3px;
+                padding: 15px 37px;
+                color: #fff;
+                font-family: Raleway;
+                font-size: 14px;
+                line-height: 23px;
+                font-weight: 800;
+            }
+            &_button:hover {
+                background-color: #fff;
+                color: #998675;
+            }
+            &_button:active {
+                background-color: #584e44;
+                color: #e7c8ad;
+            }
+        }    
+    }
+    &_indicators {
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        &_indicator {
+            display: block;
+            width: 15px;
+            height: 15px;
+            box-sizing: border-box;
+            background: url(../img/header_icon/01.png)  no-repeat center;
+            margin: 0 10px 0 0;
+        }
+        &_indicator:last-child {
+            margin: 0;
+        } 
+        &_indicator:hover {
+            background: url(../img/header_icon/02.png) no-repeat center;
+            width: 15px;
+            height: 15px;
+        }
+    }
+}
+
+@media(max-width:480px) {
+    .header {
+        background-size: 140%;
+        background-position: top;
+        padding: 25px 0;
+        &_main {
+            display: none;
+        }
+        &_indicators {
+            display: none;
+        }
+        &_top {
+            min-width: 370px;
+            &_logo {
+                margin: 0;
+                height: 95px;
+            }
+            &_nav{
+                min-height: 30px;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                justify-content: unset;
+                align-items: center;
+                padding: 32px 0 0;
+                width: 25%;
+                &_label {
+                    margin: 0 5px 5px;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    align-self: flex-end;
+                    width: 35px;
+                    height: 30px;
+                    cursor: pointer;
+                    transition: 0.4s;
+                    &_icon {
+                        display: block;
+                        position: relative;
+                        background: #fff;
+                        width: 90%;
+                        height: 4px;
+                        transition: 0.4s;
+                        &::after,
+                        &::before {
+                          content: "";
+                          display: block;
+                          position: absolute;
+                          background: #fff;
+                          width: 100%;
+                          height: 4px;
+                          transition: 0.4s;
+                        }
+                        &::after {
+                          top: 8px;
+                        }
+                        &::before {
+                          top: -8px;
+                        }
+                      }
+                }
+                &_menu {
+                    visibility: hidden;
+                    margin: 0 auto;
+                    height: 0;
+                    width: 0;
+                    flex-direction: column;
+                    padding: 0;
+                    box-sizing: border-box;
+                    &_item {
+                        min-height: 20px;
+                        text-align: center;
+                        margin: 1px 0;
+                        background: rgba(255, 255, 255, 0.048) no-repeat;
+                        border-radius: 5px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: flex-end;
+                        &_link {
+                            padding: 0 5px;
+                        }
+                    }
+                }
+                &_input:checked ~ &_menu {
+                    visibility: visible;
+                    height: auto;
+                    width: 100%;
+                    flex-direction: column;
+                    display: flex;  
+                }
+                &_input:checked ~ &_label > &_label_icon{
+                    background: transparent;
+                    &::before, 
+                    &::after {
+                        top: 0;
+                    }
+                    &::after {
+                        transform: rotate(-45deg);
+                    }
+                    &::before {
+                        transform: rotate(45deg);
+                    }  
+                }
+                &_button {
+                    margin: 5px 10px 5px 0;
+                    align-self: flex-end;
+                }
+                &_button:last-child  {
+                    margin: 0 5px;
+                    //upd
+                }
+            }
+        }
+    }
+}
+
